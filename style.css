@@ -4,3 +4,6 @@ body{
 .lista{
 	display: inline-block;
 }
+.modal-backdrop{
+	display: none;
+}
