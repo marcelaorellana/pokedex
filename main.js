@@ -1,10 +1,10 @@
 $(document).ready(function($) {
-
+	var paginacion = 0;
 		$.ajax({
 			url : 'http://pokeapi.co/api/v2/pokemon/',
 			type : 'GET',
 			datatype : 'json',
-			data : {'limit': '10'}
+			data : {'limit': '20'}
 		})
 		.done(function(respuesta){
 			console.log("successe");
@@ -73,16 +73,47 @@ $(document).ready(function($) {
             		
 					cadaPK.append(modalPK);
 					$(".lista").append(cadaPK);
-					
-					
+										
 				}
 				
-				
-			});
-
-			
+			});			
 		}
+		$(".siguiente").on("click", function(e){
+					$(".lista").empty();
+					paginacion += 20;
+					$.ajax({
+						url : 'http://pokeapi.co/api/v2/pokemon/',
+						type : 'GET',
+						datatype : 'json',
+						data : {'offset':paginacion}
+					})
+					.done(function(respuesta){
+						console.log("successe");
+						//console.log(respuesta);
+						nombresPK(respuesta);
+					})
+					.fail(function(){
+						console.log("error");
+					})
+				});
 
-		
+		$(".antes").on("click", function(e){
+					$(".lista").empty();
+					paginacion -= 20;
+					$.ajax({
+						url : 'http://pokeapi.co/api/v2/pokemon/',
+						type : 'GET',
+						datatype : 'json',
+						data : {'offset':paginacion}
+					})
+					.done(function(respuesta){
+						console.log("successe");
+						//console.log(respuesta);
+						nombresPK(respuesta);
+					})
+					.fail(function(){
+						console.log("error");
+					})
+				});
 
 });
