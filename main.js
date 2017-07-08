@@ -57,7 +57,7 @@ $(document).ready(function($) {
             			//console.log(abilidades[i].ability.name);
             			tipoHabilidad += "<li><p>" + abilidades[i].ability.name + "</p></li>";
             		}
-					var foto = $("<img>").attr("src","http://pokeapi.co/media/img/" + idPK + ".png");
+					var foto = $("<img>").attr("src","https://pokeapi.co/media/img/" + idPK + ".png");
 					var spacioFoto =$("<div>");
 					var cadaPK = $("<div>");
 					spacioFoto.attr("class", "spacioFoto");
