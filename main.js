@@ -57,7 +57,7 @@ $(document).ready(function($) {
             			//console.log(abilidades[i].ability.name);
             			tipoHabilidad += "<li><p>" + abilidades[i].ability.name + "</p></li>";
             		}
-					var foto = $("<img>").attr("src","https://pokeapi.co/media/img/" + idPK + ".png");
+					var foto = $("<img>").attr("src","http://pokeapi.co/media/img/" + idPK + ".png");
 					var spacioFoto =$("<div>");
 					var cadaPK = $("<div>");
 					spacioFoto.attr("class", "spacioFoto");
@@ -67,7 +67,7 @@ $(document).ready(function($) {
 					spacioFoto.append(foto);
 					cadaPK.append(spacioFoto);
 					cadaPK.append(pokeNombre);
-					var modalPK = $('<div class="modal fade" id="myModal' + idPK + '" role="dialog"><div class="modal-dialog"><!-- Modal content--><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h1 class="modal-title">' + nombrePokemon + '</h1></div><div class="modal-body"> <img src="https://pokeapi.co/media/img/'+idPK+ '.png" alt="" class="imagModal"> <div class="tipoClass"><h3>Tipo de Pokemón</h3><ul>'+ tipoCadena + '</ul></div> <div class="abilidadClass"><h3>Habilidades</h3><ul>'+ tipoHabilidad + '</ul></div></div> </div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>');
+					var modalPK = $('<div class="modal fade" id="myModal' + idPK + '" role="dialog"><div class="modal-dialog"><!-- Modal content--><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h1 class="modal-title">' + nombrePokemon + '</h1></div><div class="modal-body"> <img src="http://pokeapi.co/media/img/'+idPK+ '.png" alt="" class="imagModal"> <div class="tipoClass"><h3>Tipo de Pokemón</h3><ul>'+ tipoCadena + '</ul></div> <div class="abilidadClass"><h3>Habilidades</h3><ul>'+ tipoHabilidad + '</ul></div></div> </div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>');
 					$(".modal").on("shown.bs.modal", function () {
                 	if ($(".modal-backdrop").length > 1) {
                     	$(".modal-backdrop").not(':first').remove();
@@ -121,4 +121,5 @@ $(document).ready(function($) {
 						console.log("error");
 					})
 				});
+
 });
