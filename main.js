@@ -1,7 +1,7 @@
 $(document).ready(function($) {
 	var paginacion = 0;
 		$.ajax({
-			url : 'https://pokeapi.co/api/v2/pokemon/',
+			url : 'http://pokeapi.co/api/v2/pokemon/',
 			type : 'GET',
 			datatype : 'json',
 			data : {'limit': '21'}
@@ -87,7 +87,7 @@ $(document).ready(function($) {
 					$(".lista").empty();
 					paginacion += 20;
 					$.ajax({
-						url : 'https://pokeapi.co/api/v2/pokemon/',
+						url : 'http://pokeapi.co/api/v2/pokemon/',
 						type : 'GET',
 						datatype : 'json',
 						data : {'offset':paginacion}
@@ -108,7 +108,7 @@ $(document).ready(function($) {
 						paginacion -= 20;
 					}
 					$.ajax({
-						url : 'https://pokeapi.co/api/v2/pokemon/',
+						url : 'http://pokeapi.co/api/v2/pokemon/',
 						type : 'GET',
 						datatype : 'json',
 						data : {'offset':paginacion}
