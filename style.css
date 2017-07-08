@@ -1,9 +1,73 @@
 body{
 	background-color: #c0c5ce;
+	font-family: 'Cabin', sans-serif;
+}
+h1{
+	margin: 0;
+	padding: 0;
+}
+header{
+	background-color: #A040A0;
+	text-align: center;
+	color: white;
+	padding: 10px 0;
+}
+header p{
+	font-size: 20px;
+	margin: 0;
 }
 .lista{
-	display: inline-block;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 10px 100px;
 }
 .modal-backdrop{
 	display: none;
+}
+.cajas{
+	text-align: center;
+	border: 2px solid #A040A0;
+	background-color: pink;
+	width: 190px;
+	height: 150px;
+	margin: 10px 10px;
+	border-radius: 5px;
+}
+.cajas:hover{
+	background-color: #B7E4E4;
+}
+.cajas p{
+	font-size: 20px;
+	text-transform: capitalize;
+}
+.spacioFoto{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 120px;
+}
+.modal-body{
+	display: flex;
+	justify-content: space-around;
+}
+.modal-title{
+	text-transform: capitalize;
+}
+.tipoClass, .abilidadClass{
+	text-align: center;
+	text-transform: capitalize;
+}
+.botones{
+	text-align: center;
+}
+.antes, .siguiente{
+	display: inline-block;
+	width: 10%;
+	height: 40px;
+	background-color: #78C850;
+	border: none;
+	margin: 20px;
+	font-size: 20px;
+	color: whitesmoke;
 }
